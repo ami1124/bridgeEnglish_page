@@ -1,0 +1,680 @@
+@charset 'utf-8';
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root{
+    --main-font-color:#151515;
+    --accent-color:#293499;
+    --main-color:#CAEAF4;
+    --base-color:#FFF9C4;
+    --bacoground-color:#fff;
+}
+html{
+    scroll-behavior: smooth;
+    overflow: auto;
+    font-size: 62.5%;   
+}
+body{
+    color: var(--main-font-color);
+    font-size: 1.6rem;
+    overflow: hidden;
+}
+a{
+    text-decoration: none;
+}
+.sub-title{
+    font-size: 2.6rem;
+    display: block;
+    text-align: center;
+    padding-top: 8%;
+}
+.btn-basic{
+    background-color: var(--accent-color);
+    padding:5% ;
+    margin:0 15%;
+    border-radius: 5px;
+}
+
+.btn-basic a{
+    text-decoration: none;
+    color: var(--bacoground-color);
+    font-size: 1.6rem;
+}
+.btn-basic:hover{
+    box-shadow: none;
+    transform: translateY(5px);
+    transition: 0.5s;
+    opacity: 0.7;
+}
+/*ヘッダーの設定*/
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    z-index: 5;
+    background-color: var(--bacoground-color);
+}
+.header-sub-area{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.header-sub-area_logo{
+    margin-top: 2%;
+}
+.header-sub-area_logo a{
+    text-decoration: none;
+    color: var(--main-font-color);
+}
+.header-sub-area_logo p{
+    font-size: 1.5rem;
+}
+.header-inquiry-area{
+    display:inline-block;
+    width: 18%;
+    margin-top: 12px;
+}
+.header-inquiry-text-area {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.6rem;
+    width: 100%;
+}
+.header-inquiry-text-area a{
+    text-decoration: none;
+    color: var(--main-font-color);
+}
+.header-inquiry-area_btn{
+    background-color: var(--main-color);
+    border-radius: 5px;
+    font-size: 1.6rem;
+    padding: 4%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 3%;
+}
+.header-inquiry-area_btn a{
+    text-decoration: none;
+    color: var(--main-font-color);
+}
+.header-inquiry-area_btn img{
+    width: 18%;
+    margin-left: 20%;
+    margin-top: -10%;
+}
+.header-inquiry-area_btn:hover{
+    background-color: var(--base-color);
+    border:solid 2px var(--main-font-color);
+}
+
+.header-btn-area{
+    display: flex;
+    flex-direction: row;
+    font-size: 1.6rem;
+    width: 30%;
+    background-color: #FFF9C4;
+}
+.header-btn-area-text{
+    display:block;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    border: solid 5px var(--bacoground-color);
+}
+.header-btn-area-text:hover{
+    background-color: var(--accent-color);
+}
+.header-btn-area-text a:hover{
+    color: var(--bacoground-color);
+}
+.header-btn-area-text p{
+    padding:25% 5% 5% 5%;
+}
+.header-btn-area-text a{
+    text-decoration: none;
+    color: var(--main-font-color);
+}
+.header-btn-area_login{
+    background-color: var(--main-color);
+}
+.header-btn-area_login p{
+    padding-top: 30%;
+}
+nav{
+    width: 100%;
+    margin: 5px 0;
+    height: 65%;
+}
+.gnav-header-area{
+    width: 100%;
+    background-color: var(--main-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 100%;
+}
+.gnav-header-area li{
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    padding: 2.5% 0;
+}
+.gnav-header-area li a{
+    text-decoration: none;
+    color: var(--main-font-color);
+    display: block;
+    text-align: center;
+    font-size: 1.8rem;
+}
+.gnav-header-area li:hover{
+    background-color: var(--accent-color);
+}
+.gnav-header-area li a:hover{
+    text-decoration: none;
+    color: var(--bacoground-color);
+}
+/*メインビジュアルの設定*/
+.mv-visual{
+    background-color: var(--accent-color);
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+.mv-visual_img{
+    position: absolute;
+    width: 75%;
+    bottom: 0;
+    left: 30%;
+    z-index: 1;
+}
+.mv-visual-text-area{
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    z-index: 1;
+    background-color: var(--bacoground-color);
+    display: inline-block;
+    padding: 10px;
+    opacity: 0.9;
+}
+.mv-visual-smalllogo{
+    display: none;
+}
+/*人気のヒミツの設定*/
+.popularity-secret{
+    width: 100%;
+    padding-top:5%;
+}
+.popularity-secret_item{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 5%;
+}
+.popularity-secret_item_card{
+   width: 300px;
+   background-color: var(--base-color);
+   box-shadow:0 0 8px -2px gray;
+}
+.popularity-secret_item_card img{
+    width: 100%;
+    height: 220px;
+}
+.popularity-secret_item_card_text_area{
+    display: block;
+    text-align: center;
+}
+.popularity-secret_item_card_text_area p{
+    margin-top: 2%;
+    font-weight: 700;
+    font-size: 2.0rem;
+}
+.popularity-secret_item_card_text_area article{
+    padding: 5%;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    letter-spacing: 1px;
+}
+/*目的別のレッスンの設定*/
+.recommendation-lesson{
+    width: 100%;
+    padding: 5%;
+}
+.recommendation-lesson p{
+    background-color: var(--accent-color);
+    color: var(--bacoground-color);
+    text-align: center;
+    margin: 3%;
+    padding: 2%;
+    font-size: 2.0rem;
+}
+.recommendation-lesson_item{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 0 3%;
+}
+.recommendation-lesson_item_card{
+    display: flex;
+    width: 700px;
+    height: 400px;
+    background-color: var(--main-color);
+    border: solid 10px var(--bacoground-color);
+    padding: 20px;
+}
+.recommendation-lesson_item_card img{
+    width: 55%;
+    border-radius: 20px;
+}
+.recommendation-lesson_item_card_text_area{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+    margin-left: 30px;
+    text-align: center;
+}
+.recommendation-lesson_item_card_text_area p{
+    margin-top: 2%;
+    font-weight: 700;
+    font-size: 2.0rem;
+    background-color: var(--main-color);
+    color: var(--main-font-color);
+    padding: 10px;
+}
+.recommendation-lesson_item_card_text_area article{
+    line-height: 1.6;
+    letter-spacing: 1.5px;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+}
+
+.recommendation-lesson_item_btn_area{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.btn-basic-large{
+    width: 40%;
+    padding: 2%;
+    background-color: var(--accent-color);
+    display: block;
+    text-align: center;
+    margin-top: 2%;
+}
+.btn-basic-large a{
+    text-decoration: none;
+    color: var(--bacoground-color);
+    font-size: 2.4rem;
+}
+.btn-basic-large:hover{
+    opacity: 0.7;
+    transform: translateY(5px);
+    transition: 0.5s;
+}
+/*サブビジュアルの設定*/
+.sub-visual-frist{
+    margin: 0;
+}
+.sub-visual-title{
+    font-size: 2.8rem;
+    display:inline-block;
+    padding-top: 8%;
+    margin-left: 5%;
+    letter-spacing: 1.8px;
+}
+/*スクールをさがすの設定*/
+.search-school{
+    background-color: var(--main-color);
+    padding-bottom: 4%;
+    margin: 0 5%;
+}
+.search-school_item{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0;
+}
+.search-school_item_btn_area{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 5%;
+
+}
+.search-school_btn{
+    background-color: var(--bacoground-color);
+    width: 30%;
+    padding: 5%;
+    margin: 3%;
+    display:inline-block;
+    text-align: center;
+    font-size: 2.2rem;
+}
+.search-school_btn a{
+    text-decoration: none;
+    color: var(--main-font-color);
+}
+.search-school_btn:hover{
+    background-color: var(--accent-color);
+}
+.search-school_btn a:hover{
+    text-decoration: none;
+    color: var(--bacoground-color);
+}
+.search-school_item_img_area img{
+    width: 100%;
+}
+.search-school_item_btn_area p{
+    font-size: 2.2rem;
+}
+/*講師の紹介の設定*/
+.school-teacher{
+    background-color: var(--base-color);
+    margin: 2% 5%;
+    padding-top: 3px;
+    padding-bottom: 5%;
+    border: solid 2px var(--accent-color);
+}
+.school-teacher_item_area{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 3%;
+}
+.school-teacher_item_area img{
+    width: 400px;
+    height: 350px;
+    border-radius: 250px;
+}
+.school-teacher_text_area{
+    position: relative;
+}
+.school-teacher_name{
+    font-size: 1.8rem;
+}
+.school-teacher_text_area p{
+    width: fit-content;
+    font-size: 2.4rem;
+}
+.school-teacher_text_area article{
+    padding-top: 5%;
+    font-size: 2.0rem;
+}
+.school-teacher_text_area_btn{
+    display: inline-block;
+    position: absolute;
+    bottom: -130px;
+    left: 35%;
+    transform: translate(-50%,-50%);
+    padding: 2% 5%;
+}
+.school-teacher_text_area_btn a{
+    font-size: 2.0rem;
+}
+.school-teacher_text_area_btn:hover{
+    box-shadow: none;
+    transform: translate(-50%,-45%);
+    transition: 0.5s;
+    opacity: 0.7;
+}
+.school-teacher_text_area img {
+    position: absolute;
+    top: -40px;
+    right: 20px;
+    width: 70px;
+    height: 25px;
+}
+/*受講生の声の設定*/
+.student-voice{
+    margin:0  5%;
+    padding: 2%;
+    background-color: var(--accent-color);
+    position: relative;
+}
+.student-voice a{
+    width: 100%;
+    text-decoration: none;
+}
+.student-voice_text_area{
+    color: var(--bacoground-color);
+    width: fit-content;
+    margin-right: 4%;
+    position: absolute;
+    display:block;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 4;
+  font-weight: 900;
+  font-size: 2.2rem;
+}
+.student-voice_img_area {
+    width: fit-content;
+    margin-left: 80%;
+}
+.student-voice_img_area img{
+    width: 40%;
+}
+/*インフォメーションの設定*/
+.information{
+    margin: 3%;
+}
+.information h2{
+    margin-bottom: 5%;
+}
+.information-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5% 0;
+    border-bottom: var(--main-font-color)  dashed 4px;
+}
+.information-btn{
+    background-color: var(--main-color);
+    border-radius: 8px;
+    padding:10px 15px;
+    margin-bottom: 10px;
+}
+.information-btn a{
+    color: var(--main-font-color);
+    text-decoration: none;
+    font-size: 2.0rem;
+}
+.information-btn:hover{
+    box-shadow: 0 0 2px 1px gray;
+    transition: 0.5s;
+    opacity: 0.7;
+}
+.btn-basic:hover{
+    box-shadow: none;
+    opacity: 0.7;
+}
+.btn-notice{
+    background-color: var(--accent-color);
+}
+.btn-notice a{
+    color: var(--bacoground-color);
+    text-decoration: none;
+}
+.btn-event{
+    background-color: var(--base-color);
+}
+.information-item_text{
+    display: block;
+    text-align: end;
+}
+.information-item_title{
+    font-size: 2.0rem;
+}
+.information-years{
+    font-size: 1.6rem;
+}
+/*バナーの設定*/
+.banner{
+    margin:8% 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.banner-item{
+    position: relative;
+    width: 500px;
+    height: 300px;
+    margin: 5px;
+    border:solid  2px var(--accent-color);
+}
+.banner-item-img{
+    width: 100%;
+    height: 100%;
+}
+.banner-item p{
+    position: absolute;
+    display:inline-block;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 1.6rem;
+  z-index: 2;
+  font-weight: 900;
+}
+/*無料レッスンとカウンセリングの設定*/
+.application{
+    margin: 5%;
+    position: relative;
+}
+.application-item{
+    display: block;
+    text-align: center;
+    height: 650px;
+}
+.application img{
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+}
+.application-text{
+    position: absolute;
+    display:inline-block;
+  text-align: center;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 1.8rem;
+  z-index: 1;
+  width: 90%;
+  font-weight: 900;
+}
+.application-btn{
+    background-color: var(--accent-color);
+    position: absolute;
+    display:block;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 2.8rem;
+  z-index: 2;
+  font-weight: 900;
+  width: 65%;
+}
+.application-btn-text{
+    padding: 5% 20px;
+}
+.application-btn-text a{
+    color: var(--bacoground-color);
+    text-decoration: none;
+}
+.application-btn:hover{
+    box-shadow: none;
+    transform: translate(-50%,-40%);
+    transition: 0.5s;
+}
+.application article{
+    position: absolute;
+    display:block;
+  text-align: center;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 2.2rem;
+  z-index: 2;
+  width: 90%;
+  font-weight: 900;
+}
+/*フッターの設定*/
+footer{
+    margin-top: 5% ;
+}
+/*水色フッターの設定*/
+.main-footer{
+    background-color: var(--main-color);
+    padding: 4%; 
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.8rem;
+}
+.main-footer table{
+    width: 1300px;
+    text-align: left;
+    table-layout: fixed;
+    color: var(--main-font-color);
+}
+.main-footer  table th{
+    border-bottom: solid 1px var(--main-font-color);
+    padding: 5px;
+    margin-right: 5%;
+    white-space: nowrap;
+    width: 250px;
+}
+.main-footer  table  td{
+    padding: 20px 5px 30px 5px;
+    white-space: nowrap;
+    width: 150px;
+}
+.main-footer ul{
+    border-left: dashed 4px var(--main-font-color);
+    margin-left: 50px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    
+}
+.main-footer li{
+    list-style: none;
+    padding-left: 10px;
+}
+.main-footer li a{
+    color: var(--main-font-color);
+}
+/*青色フッターの設定*/
+.sub-navigation-footer{
+    background-color: var(--accent-color);
+    text-align: center;
+    color: var(--bacoground-color);
+    height: 120px;
+}
+.sub-navigation-footer-list{
+    display:flex;
+    justify-content: space-evenly;
+    padding:30px 20px;
+}
+.sub-navigation-footer-list li{
+    list-style: none;
+    font-size: 1.6rem;
+}
+.sub-navigation-footer-list li a{
+    color: var(--bacoground-color);
+}
+.sub-navigation-footer-Company{
+    padding-bottom: 5px;
+}

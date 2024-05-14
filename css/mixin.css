@@ -1,0 +1,623 @@
+@charset 'utf-8';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+@media screen and (max-width: 768px) {
+  :root {
+    --main-font-color: #151515;
+    --accent-color: #293499;
+    --main-color: #caeaf4;
+    --base-color: #fff9c4;
+    --bacoground-color: #fff;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    overflow: auto;
+    font-size: 62.5%;
+  }
+
+  body {
+    color: var(--main-font-color);
+    font-size: 1.6rem;
+    overflow: hidden;
+  }
+
+  a {
+    text-decoration: none;
+  }
+  .sub-visual-title {
+    font-size: 2.4rem;
+    display: block;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+  }
+  /*ヘッダーの設定*/
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+    background-color: var(--bacoground-color);
+    height: 120px;
+  }
+  .header-sub-area {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+  }
+  .header-sub-area_logo {
+    margin: 0;
+    padding: 5%;
+  }
+  .header-inquiry-text-area {
+    display: none;
+  }
+  .header-btn-area {
+    display: none;
+  }
+  .header-inquiry-area_btn {
+    width: 150px;
+    padding: 5%;
+    margin-top: 20%;
+    display: none;
+  }
+  .header-inquiry-area_btn a {
+    display: flex;
+  }
+  .header-inquiry-area_btn img {
+    width: 20px;
+    margin: 0;
+  }
+  .gnav_hidden {
+    display: none;
+  }
+
+  #gnav_open {
+    position: fixed;
+    top: 5%;
+    right: 5%;
+    width: 50px;
+    height: 50px;
+    z-index: 5;
+  }
+
+  #gnav_open span,
+  #gnav_open span::before,
+  #gnav_open span::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 30px;
+    left: 20%;
+    top: 10px;
+    background: var(--main-font-color);
+    display: block;
+  }
+
+  #gnav_open span::before {
+    top: 13px;
+    left: -0.5px;
+  }
+
+  #gnav_open span::after {
+    top: 25px;
+    left: -0.5px;
+  }
+
+  #gnav_input:checked ~ #gnav_open span {
+    display: block;
+    height: 0;
+  }
+
+  #gnav_input:checked ~ #gnav_open span::before {
+    top: 15px;
+    transform: rotate(-45deg);
+    transition: 0.7s;
+    background: var(--main-font-color);
+  }
+
+  #gnav_input:checked ~ #gnav_open span::after {
+    top: 15px;
+    transform: rotate(45deg);
+    transition: 0.7s;
+    background: var(--main-font-color);
+  }
+
+  #gnav_input:checked ~ nav {
+    left: 0;
+  }
+  nav {
+    background-color: var(--main-font-color);
+    width: 100%;
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    left: 100%;
+    transition: 0.7s;
+    z-index: 4;
+    opacity: 0.9;
+    margin: 0;
+  }
+  .gnav-header-area {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+    padding: 10%;
+  }
+  .gnav-header-area li:hover {
+    background-color: var(--main-color);
+  }
+  /*メインビジュアルの設定*/
+  .mv-visual {
+    height: 90vh;
+  }
+  .mv-visual_img {
+    position: absolute;
+    width: 95%;
+    height: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+  .mv-visual-text-area {
+    position: absolute;
+    bottom: 30px;
+    left: 20%;
+    margin: 5%;
+    width: 50%;
+    z-index: 1;
+    background-color: var(--bacoground-color);
+    display: inline-block;
+    text-align: center;
+    padding: 5px;
+    opacity: 0.9;
+  }
+  .mv-visual-textlogo {
+    display: none;
+  }
+  .mv-visual-smalllogo {
+    display: inline-block;
+    text-align: center;
+    margin-top: 5%;
+    width: 40%;
+  }
+  .mv-visual-text {
+    font-size: 1.8rem;
+    padding: 0;
+  }
+  /*人気のヒミツの設定*/
+  .popularity-secret_item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 5%;
+  }
+  .popularity-secret_item_card {
+    width: 400px;
+    background-color: var(--base-color);
+    box-shadow: 0 0 8px -2px gray;
+    margin-bottom: 20px;
+  }
+  .popularity-secret_item_card img {
+    width: 100%;
+    height: 300px;
+  }
+  .popularity-secret_item_card_text_area {
+    display: block;
+    text-align: center;
+  }
+  .popularity-secret_item_card_text_area p {
+    margin-top: 2%;
+    font-weight: 700;
+    font-size: 2rem;
+  }
+  .popularity-secret_item_card_text_area article {
+    padding: 5%;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    letter-spacing: 1px;
+  }
+  /*目的別のレッスンの設定*/
+  .recommendation-lesson {
+    width: 100%;
+    padding: 5%;
+  }
+  .recommendation-lesson p {
+    background-color: var(--accent-color);
+    color: var(--bacoground-color);
+    text-align: center;
+    margin: 5%;
+    padding: 2%;
+    font-size: 2rem;
+  }
+  .recommendation-lesson_item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 0 5%;
+    position: relative;
+  }
+  .recommendation-lesson_item_card {
+    display: flex;
+    align-items: center;
+    width: 600px;
+    height: 400px;
+    background-color: var(--bacoground-color);
+    border: solid 10px var(--bacoground-color);
+    padding: 0px;
+    margin: 8% 0;
+  }
+  .recommendation-lesson_item_card img {
+    width: 90%;
+    height: 90%;
+    border-radius: 20px;
+  }
+  .sp_card_text_area_Everyday_English {
+    position: absolute;
+    display: inline-block;
+    margin-left: 0;
+    text-align: center;
+    background-color: var(--main-color);
+    top: 15%;
+    left: 50%;
+    width: 50%;
+    border-radius: 20px;
+    padding: 10px;
+  }
+  .sp_card_text_area_business_English {
+    position: absolute;
+    display: inline-block;
+    margin-left: 0;
+    text-align: center;
+    background-color: var(--main-color);
+    top: 40%;
+    left: 50%;
+    width: 50%;
+    border-radius: 20px;
+    padding: 10px;
+  }
+  .sp_card_text_area_toeic_English {
+    position: absolute;
+    display: inline-block;
+    margin-left: 0;
+    text-align: center;
+    background-color: var(--main-color);
+    top: 65%;
+    left: 50%;
+    width: 50%;
+    border-radius: 20px;
+    padding: 10px;
+  }
+  .sp_card_text_area_student_lesson {
+    position: absolute;
+    display: inline-block;
+    margin-left: 0;
+    text-align: center;
+    background-color: var(--main-color);
+    top: 88%;
+    left: 50%;
+    width: 50%;
+    border-radius: 20px;
+    padding: 10px;
+  }
+  .recommendation-lesson_item_card_text_area p {
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: var(--main-font-color);
+    padding: 0;
+    background-color: var(--main-color);
+  }
+  .recommendation-lesson_item_card_text_area article {
+    font-size: 1.6rem;
+  }
+  .btn-basic-large a {
+    font-size: 1.8rem;
+  }
+  /*スクールをさがすの設定*/
+  .school-teacher {
+    background-color: var(--base-color);
+    margin: 10% 5%;
+    padding-bottom: 5%;
+    border: solid 2px var(--accent-color);
+  }
+  .search-school_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0;
+  }
+  .search-school_item_btn_area {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 5%;
+  }
+  .search-school_btn {
+    background-color: var(--bacoground-color);
+    width: 30%;
+    padding: 3%;
+    margin: 3%;
+    display: inline-block;
+    text-align: center;
+    font-size: 2rem;
+  }
+  .school_btn_other {
+    width: 75%;
+  }
+  .search-school_btn a {
+    text-decoration: none;
+    color: var(--main-font-color);
+  }
+  .search-school_btn:hover {
+    background-color: var(--accent-color);
+  }
+  .search-school_btn a:hover {
+    text-decoration: none;
+    color: var(--bacoground-color);
+  }
+  .search-school_item_img_area img {
+    width: 100%;
+    padding: 0 8px;
+  }
+  .search-school_item_btn_area p {
+    font-size: 1.6rem;
+  }
+  /*講師の紹介の設定*/
+  .school-teacher_item_area {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 3%;
+    padding: 0 5px;
+  }
+  .school-teacher_item_area img {
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;
+  }
+  .school-teacher_text_area {
+    position: relative;
+    margin-left: 10px;
+  }
+  .school-teacher_name {
+    font-size: 1.6rem;
+  }
+  .school-teacher_text_area p {
+    width: fit-content;
+    font-size: 1.6rem;
+  }
+  .school-teacher_text_area article {
+    padding-top: 5%;
+    font-size: 1.6rem;
+  }
+  .school-teacher_text_area_btn {
+    display: inline-block;
+    position: absolute;
+    bottom: -60px;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    padding: 2%;
+    width: 150px;
+    text-align: center;
+  }
+  .school-teacher_text_area_btn a {
+    font-size: 1.4rem;
+  }
+  .school-teacher_text_area img {
+    position: absolute;
+    top: -30px;
+    right: 20px;
+    width: 60px;
+    height: 20px;
+  }
+  /*受講生の声の設定*/
+  .student-voice {
+    margin: 0 5%;
+    padding: 2%;
+    background-color: var(--accent-color);
+    position: relative;
+  }
+
+  .student-voice_text_area {
+    color: var(--bacoground-color);
+    width: fit-content;
+    margin-right: 0;
+    position: absolute;
+    display: block;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+    font-weight: 900;
+  }
+  .student-voice_text_area p {
+    font-size: 1.8rem;
+  }
+  .student-voice_text_area article {
+    font-size: 1.0rem;
+  }
+  /*インフォメーションの設定*/
+  .information-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5% 0;
+    border-bottom: var(--main-font-color) dashed 4px;
+  }
+  .information-btn {
+    background-color: var(--main-color);
+    border-radius: 8px;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  .information-btn a {
+    font-size: 1.6rem;
+  }
+  .information-btn:hover {
+    box-shadow: 0 0 2px 1px gray;
+    transition: 0.5s;
+    opacity: 0.7;
+  }
+  .btn-basic:hover {
+    box-shadow: none;
+    opacity: 0.7;
+  }
+  .btn-notice {
+    background-color: var(--accent-color);
+  }
+  .btn-notice a {
+    color: var(--bacoground-color);
+    text-decoration: none;
+  }
+  .btn-event {
+    background-color: var(--base-color);
+  }
+  .information-item_title {
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    letter-spacing: 0.9px;
+  }
+  .information-years {
+    font-size: 1.4rem;
+  }
+  /*バナーの設定*/
+  .banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .banner-item {
+    position: relative;
+    width: 80%;
+    height: 300px;
+    margin: 5px;
+    border: solid 2px var(--accent-color);
+  }
+  .banner-item p {
+    position: absolute;
+    display: inline-block;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.4rem;
+    z-index: 2;
+    font-weight: 900;
+  }
+  /*無料レッスンとカウンセリングの設定*/
+  .application-item {
+    display: block;
+    text-align: center;
+    height: 500px;
+  }
+  .application img {
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+  }
+  .application-text {
+    position: absolute;
+    display: inline-block;
+    text-align: center;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.6rem;
+    z-index: 1;
+    font-weight: 900;
+    width: 90%;
+  }
+  .application-btn {
+    background-color: var(--accent-color);
+    position: absolute;
+    display: block;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.0rem;
+    z-index: 2;
+    font-weight: 900;
+    width: 90%;
+  }
+  .application-btn-text {
+    padding: 5% 20px;
+  }
+  .application-btn-text a {
+    color: var(--bacoground-color);
+    text-decoration: none;
+  }
+  .application-btn:hover {
+    box-shadow: none;
+    transform: translate(-50%, -40%);
+    transition: 0.5s;
+  }
+  .application article {
+    position: absolute;
+    display: block;
+    text-align: center;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.6rem;
+    z-index: 2;
+    font-weight: 900;
+    width: 90%;
+  }
+  /*水色フッターの設定*/
+.main-footer{
+    background-color: var(--main-color);
+    padding: 4%; 
+    display: flex;
+    justify-content: center;
+}
+.main-footer table{
+    width: 1000px;
+    text-align: left;
+    table-layout: fixed;
+    color: var(--main-font-color);
+}
+.main-footer  table th{
+    border-bottom: solid 1px var(--main-font-color);
+    padding: 5px;
+    margin-right: 5%;
+    white-space: nowrap;
+    width: 200px;
+}
+.main-footer  table  td{
+    padding: 20px 5px 30px 5px;
+    white-space: nowrap;
+    width: 100px;
+}
+.main-footer ul{
+    border-left: dashed 4px var(--main-font-color);
+    margin-left: 50px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    
+}
+.main-footer li{
+    list-style: none;
+    padding-left: 10px;
+}
+.main-footer li a{
+    color: var(--main-font-color);
+}
+}
