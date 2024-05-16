@@ -11,9 +11,10 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Open+Sans:wght@400;700&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/normalize.css" />
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/mixin.css">
+  <link rel="stylesheet" href="css/mixin.css" />
+  <link rel="stylesheet" href="aos/aos.css">
 </head>
 
 <body>
@@ -24,7 +25,7 @@
       <div class="header-sub-area_logo">
         <a href="#">
           <p>英会話スクール&nbsp;TOEIC対策</p>
-          <img src="img/bridge.English.logo.png" alt="ブリッジ英会話スクールロゴ" />
+          <img src="img/bridge.English.logo.png" alt="ブリッジ英会話スクール文字入りロゴ" />
         </a>
       </div>
       <div class="header-inquiry-area">
@@ -68,18 +69,32 @@
     </nav>
   </header>
   <section class="mv-visual">
-    <img src="img/メイン2.jpg" alt="メインビジュアル" class="mv-visual_img" />
-    <div class="mv-visual-text-area">
-      <img src="img/bridge.english.logo.small.png" alt="ロゴ" class="mv-visual-smalllogo">
-      <img src="img/bridge.English.logo.png" alt="ロゴ" class="mv-visual-textlogo">
-      <h1 class="mv-visual-text">あなたと世界の架け橋に。BRIDGE英会話スクール</h1>
+    <img src="img/メイン2.jpg" alt="PC用のメインビジュアル画像" class="pc-mv-visual-img" data-aos="fade-left"
+      data-aos-easing="ease-in-sine" data-aos-duration="2000" />
+    <img src="img/メイン2.jpg" alt="SP用のメインビジュアル画像" class="sp-mv-visual-img" data-aos="flip-left"
+      data-aos-easing="ease-in-sine" data-aos-duration="2000" />
+    <div class="pc-mv-visual-text-area" data-aos="fade-right"
+    data-aos-easing="ease-in-sine" data-aos-duration="2000">
+      <img src="img/bridge.english.logo.small.jpg" alt="ブリッジ英会話スクールロゴ" class="mv-visual-smalllogo" />
+      <img src="img/bridge.English.logo.png" alt="ブリッジ英会話スクール文字入りロゴ" class="mv-visual-textlogo" />
+      <h1 class="mv-visual-text">
+        あなたと世界の架け橋に。BRIDGE英会話スクール
+      </h1>
+    </div>
+    <div class="sp-mv-visual-text-area" data-aos="fade-up"
+    data-aos-easing="ease-in-sine" data-aos-duration="3000">
+      <img src="img/bridge.english.logo.small.jpg" alt="ブリッジ英会話スクールロゴ" class="mv-visual-smalllogo" />
+      <img src="img/bridge.English.logo.png" alt="ブリッジ英会話スクール文字入りロゴ" class="mv-visual-textlogo" />
+      <h1 class="mv-visual-text">
+        あなたと世界の架け橋に。BRIDGE英会話スクール
+      </h1>
     </div>
   </section>
   <section class="popularity-secret">
     <h2 class="sub-title">BRIDGE人気のヒミツとは</h2>
     <div class="popularity-secret_item">
-      <div class="popularity-secret_item_card">
-        <img src="img/undraw_Online_learning_re_qw08.png" alt="" />
+      <div class="popularity-secret_item_card" data-aos="zoom-in" data-aos-duration="1000">
+        <img src="img/undraw_Online_learning_re_qw08.png" alt="オンラインイラスト" />
         <div class="popularity-secret_item_card_text_area">
           <p>充実したレッスンプラン</p>
           <article>
@@ -87,8 +102,8 @@
           </article>
         </div>
       </div>
-      <div class="popularity-secret_item_card">
-        <img src="img/undraw_Teacher_re_sico.png" alt="" />
+      <div class="popularity-secret_item_card" data-aos="zoom-in" data-aos-duration="1000">
+        <img src="img/undraw_Teacher_re_sico.png" alt="先生のイラスト" />
         <div class="popularity-secret_item_card_text_area">
           <p>選りすぐりの講師陣</p>
           <article>
@@ -96,8 +111,8 @@
           </article>
         </div>
       </div>
-      <div class="popularity-secret_item_card">
-        <img src="img/undraw_Educator_re_ju47.png" alt="" />
+      <div class="popularity-secret_item_card" data-aos="zoom-in" data-aos-duration="1000">
+        <img src="img/undraw_Educator_re_ju47.png" alt="サポートのイラスト" />
         <div class="popularity-secret_item_card_text_area">
           <p>徹底したサポート体制</p>
           <article>
@@ -105,8 +120,8 @@
           </article>
         </div>
       </div>
-      <div class="popularity-secret_item_card">
-        <img src="img/undraw_Showing_support_re_5f2v.png" alt="" />
+      <div class="popularity-secret_item_card" data-aos="zoom-in" data-aos-duration="1000">
+        <img src="img/undraw_Showing_support_re_5f2v.png" alt="ハートのイラスト" />
         <div class="popularity-secret_item_card_text_area">
           <p>続けやすく通いやすい</p>
           <article>
@@ -187,7 +202,9 @@
           <div class="search-school_btn"><a href="#">関西・近畿</a></div>
           <div class="search-school_btn"><a href="#">中部</a></div>
           <div class="search-school_btn"><a href="#">九州</a></div>
-          <div class="search-school_btn school_btn_other"><a href="#">その他</a></div>
+          <div class="search-school_btn school_btn_other">
+            <a href="#">その他</a>
+          </div>
           <p>
             BRIDGEは全国展開。
             <br />お住いの地域から通いやすいスクールをお探しください
@@ -221,8 +238,8 @@
           </article>
         </div>
         <div class="student-voice_img_area">
-          <img src="img/human.png" alt="" />
-          <img src="img/human.png" alt="" />
+          <img src="img/human.png" alt="人が手を挙げているアイコン" />
+          <img src="img/human.png" alt="人が手を挙げているアイコン" />
         </div>
       </div>
     </a>
@@ -235,7 +252,9 @@
       </div>
       <div class="information-item_text">
         <p class="information-years">YYYY年M月D日</p>
-        <p class="information-item_title">「夏の短期集中プラン」を6月1日より販売開始 </p>
+        <p class="information-item_title">
+          「夏の短期集中プラン」を6月1日より販売開始
+        </p>
       </div>
     </div>
     <div class="information-item information-item_two">
@@ -244,7 +263,8 @@
       </div>
       <div class="information-item_text">
         <p class="information-years">YYYY年M月D日</p>
-        <p class="information-item_title">「イングリッシュエージェント」サービス終了に関するお知らせ
+        <p class="information-item_title">
+          「イングリッシュエージェント」サービス終了に関するお知らせ
         </p>
       </div>
     </div>
@@ -254,7 +274,8 @@
       </div>
       <div class="information-item_text">
         <p class="information-years">YYYY年M月D日</p>
-        <p class="information-item_title">[2018年9月開講]TOEIC®L&R Test集中コースお申し込み受付中！
+        <p class="information-item_title">
+          [2018年9月開講]TOEIC®L&R Test集中コースお申し込み受付中！
         </p>
       </div>
     </div>
@@ -264,7 +285,8 @@
       </div>
       <div class="information-item_text">
         <p class="information-years">YYYY年M月D日</p>
-        <p class="information-item_title"> [2018年9月開講]グローバルコミュニケーション集中コースお申し込み受付中！
+        <p class="information-item_title">
+          [2018年9月開講]グローバルコミュニケーション集中コースお申し込み受付中！
         </p>
       </div>
     </div>
@@ -274,7 +296,9 @@
       </div>
       <div class="information-item_text">
         <p class="information-years">YYYY年M月D日</p>
-        <p class="information-item_title">インスタ映えする英会話を無料で体験しよう！</p>
+        <p class="information-item_title">
+          インスタ映えする英会話を無料で体験しよう！
+        </p>
       </div>
     </div>
     <div class="information-item information-item_six">
@@ -283,92 +307,115 @@
       </div>
       <div class="information-item_text">
         <p class="information-years">YYYY年M月D日</p>
-        <p class="information-item_title">BRIDGE、オリコン顧客満足度調査「英会話スクール」で2年連続第1位を獲得
+        <p class="information-item_title">
+          BRIDGE、オリコン顧客満足度調査「英会話スクール」で2年連続第1位を獲得
         </p>
       </div>
     </div>
   </section>
   <section class="sub-visual-second">
     <div class="banner">
-      <div class="banner-item">
-      <img src="img/undraw_Notebook_re_id0r.png" alt="夏の短期集中プライベートプラン" class="banner-item-img">
-      <p>夏の短期集中プライベートプラン</p>
+      <div class="banner-item" data-aos="flip-left" data-aos-duration="3000" data-aos-easing="ease-out-cubic">
+        <img src="img/undraw_Notebook_re_id0r.png" alt="夏の短期集中プライベートプラン" class="banner-item-img" />
+        <p>夏の短期集中プライベートプラン</p>
       </div>
-      <div class="banner-item">
-        <img src="img/undraw_Travel_mode_re_2lxo.png" alt="大人のための海外英語研修" class="banner-item-img">
-        <p>大人のための海外英語研修  <br>inオーストラリア <br>旅を通して学ぶライブな英語</p>
+      <div class="banner-item" data-aos="flip-left" data-aos-duration="3000" data-aos-easing="ease-out-cubic">
+        <img src="img/undraw_Travel_mode_re_2lxo.png" alt="大人のための海外英語研修" class="banner-item-img" />
+        <p>
+          大人のための海外英語研修 <br />inオーストラリア
+          <br />旅を通して学ぶライブな英語
+        </p>
       </div>
-      <div class="banner-item">
-        <img src="img/undraw_Growing_re_olpi.png" alt="TOEIC®劇的スコアアップ講座" class="banner-item-img">
-        <p>TOEIC®劇的スコアアップ講座 <br>TOEIC®を知り尽くした講師とともに短期間点数をアップ狙う！</p>
-        </div>
+      <div class="banner-item" data-aos="flip-left" data-aos-duration="3000" data-aos-easing="ease-out-cubic">
+        <img src="img/undraw_Growing_re_olpi.png" alt="TOEIC®劇的スコアアップ講座" class="banner-item-img" />
+        <p>
+          TOEIC®劇的スコアアップ講座
+          <br />TOEIC®を知り尽くした講師とともに短期間点数をアップ狙う！
+        </p>
+      </div>
     </div>
     <div class="application">
       <div class="application-item">
-      <img src="img/英会話グループ2.jpg" alt="無料体験レッスン＆カウンセリング申し込み">
-    </div>
+        <img src="img/英会話グループ2.jpg" alt="無料体験レッスン＆カウンセリング申し込み" />
+      </div>
       <p class="application-text">今なら最大10,000円ディスカウントあり！</p>
       <div class="application-btn">
-        <p class="application-btn-text"><a href="#">無料体験レッスン＆カウンセリング申し込み</a></p>
+        <p class="application-btn-text">
+          <a href="#">無料体験レッスン＆カウンセリング申し込み</a>
+        </p>
       </div>
       <article>
-        お電話でのご予約・お問い合わせ 
-        <br>0120-123-456 (平日9:00-22:00／土日祝9:00-20:00)
+        お電話でのご予約・お問い合わせ
+        <br />0120-123-456 (平日9:00-22:00／土日祝9:00-20:00)
       </article>
     </div>
   </section>
   <footer>
     <div class="main-footer">
-      <a href="#">
-      <table>
-        <tr>
-          <th>BRIDGE人気のヒミツ</th>
-          <th>レッスンプラン</th>
-          <th>料金システム</th>
-          <th>スクールを探す</th>
-        </tr>
-
-        <tr>
-          <td>充実したレッスンプラン</td>
-          <td>初心者・日常英会話</td>
-          <td>プラン一覧</td>
-          <td>関東エリア</td>
-        </tr>  
-          
-        <tr>
-          <td>選りすぐりの講師陣</td>
-          <td>ビジネス英会話</td>
-          <td>一般教育訓練給付制度</td>
-          <td>関西・近畿エリア</td>
-        </tr>
-          
-        <tr>
-          <td>徹底したサポート体制</td>
-          <td>TOEIC対策</td>
-          <td>割引制度一覧</td>
-          <td>中部エリア</td>
-        </tr> 
-
-        <tr>
-          <td>続けやすく通いやすいシステム</td>
-          <td>学生向けレッスン</td>
-          <td>キャンペーン情報</td>
-          <td>九州・四国エリア</td>
-        </tr>
-
-        <tr>
-          <td></td>
-          <td>その他のレッスン</td>
-          <td></td>
-          <td>その他のエリア</td>
-        </tr>
-      </table>
-    </a>
       <ul>
-          <li><a href="#">受講生の声</a></li>
-          <li><a href="#">講師の紹介</a></li>
-          <li><a href="#">無料体験レッスン</a></li>
-          <li><a href="#">資料のご請求</a></li>
+        <div class="main-footer-item">
+          <div class="main-footer-head">
+            <h3><a href="#">BRIDGE人気のヒミツ</a></h3>
+          </div>
+          <div class="main-footer-body">
+            <li><a href="#">充実したレッスンプラン</a></li>
+            <li><a href="#">選りすぐりの講師陣</a></li>
+            <li><a href="#">徹底したサポート体制</a></li>
+            <li><a href="#">続けやすく通いやすいシステム</a></li>
+          </div>
+        </div>
+        <div class="main-footer-item">
+          <div class="main-footer-head">
+            <h3><a href="#">レッスンプラン</a></h3>
+          </div>
+
+          <div class="main-footer-body">
+            <li><a href="#">初心者・日常英会話</a></li>
+            <li><a href="#">ビジネス英会話</a></li>
+            <li><a href="#">TOEIC対策</a></li>
+            <li><a href="#">学生向けレッスン</a></li>
+            <li><a href="#">その他のレッスン</a></li>
+          </div>
+
+        </div>
+        <div class="main-footer-item">
+          <div class="main-footer-head">
+            <h3><a href="#">料金システム</a></h3>
+          </div>
+          <div class="main-footer-body">
+            <li><a href="#">プラン一覧</a></li>
+            <li><a href="#">一般教育訓練給付制度</a></li>
+            <li><a href="#">割引制度一覧</a></li>
+            <li><a href="#">キャンペーン情報</a></li>
+          </div>
+        </div>
+        <div class="main-footer-item">
+          <div class="main-footer-head">
+            <h3><a href="#">スクールを探す</a></h3>
+          </div>
+
+          <div class="main-footer-body">
+            <li><a href="#">関東エリア</a></li>
+            <li><a href="#">関西・近畿エリア</a></li>
+            <li><a href="#">中部エリア</a></li>
+            <li><a href="#">九州・四国エリア</a></li>
+            <li><a href="#">その他のエリア</a></li>
+
+          </div>
+
+        </div>
+        <li class="main-footer-headlink">
+          <p><a href="#">受講生の声</a></p>
+        </li>
+        <li class="main-footer-headlink">
+          <p><a href="#">講師の紹介</a></p>
+        </li>
+        <li class="main-footer-headlink">
+          <p><a href="#">無料体験レッスン</a></p>
+        </li>
+        <li class="main-footer-headlink">
+          <p><a href="#">資料のご請求</a></p>
+        </li>
       </ul>
     </div>
     <div class="sub-navigation-footer">
@@ -380,9 +427,13 @@
         <li><a href="#">採用情報</a></li>
         <li><a href="#">企業情報</a></li>
       </ul>
-      <p class="sub-navigation-footer-Company"><small>&copy; BRIDGE corporation. All rights reserved.</small></p>
+      <p class="sub-navigation-footer-Company">
+        <small>&copy; BRIDGE corporation. All rights reserved.</small>
+      </p>
     </div>
   </footer>
 </body>
+<script src="aos/aos.js"></script>
+<script src="js/script.js"></script>
 
 </html>
